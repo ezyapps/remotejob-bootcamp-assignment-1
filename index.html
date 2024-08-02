@@ -9,12 +9,12 @@
   <body>
     <div class="container items-center">
       <div class="left-box half-width">
-        <button type="button" class="generate-pin-btn">
+        <button type="button" id="generateKeyBtn" class="generate-pin-btn">
           Generate <br />Secret Key
         </button>
         <label class="generated-pin-label"> 123456 </label>
       </div>
-      <div class="half-width">
+      <div class="half-width half-width-r">
         <div class="right-box">
           <div class="enter-pin-area">
             <span class="pin-input-label">Enter PIN:</span>
@@ -32,10 +32,14 @@
             <div>7</div>
             <div>8</div>
             <div>9</div>
-            <div id="submit">Submit</div>
+            <div id="submit">
+              <span>Submit</span>
+              <img src="./img/submit.png" width="16px" alt="Submit" />
+            </div>
             <div>0</div>
           </div>
         </div>
+        <div id="messageLabel">Message box here</div>
       </div>
     </div>
   </body>
