@@ -219,6 +219,7 @@ In this example, the event listener is added to the parent div with the ID paren
 
 
 ## What is the difference between localstorage, session storage and cookies.
+
 LocalStorage, SessionStorage, and Cookies are all mechanisms for storing data on the client side in web applications. 
 
 They each have different characteristics and use cases:
@@ -229,8 +230,8 @@ They each have different characteristics and use cases:
    - Scope: Data is stored per origin (protocol, hostname, and port). All pages from the same origin can access the stored data.
    - Capacity: Typically around 5-10 MB per origin, though this can vary by browser.
    - Data Type: Stores data as strings. You need to serialize and deserialize objects (e.g., using JSON.stringify and JSON.parse).
-   - 
-Use Case: Suitable for storing long-term data that needs to be available across multiple sessions, like user preferences or settings.
+    
+**Use Case:** Suitable for storing long-term data that needs to be available across multiple sessions, like user preferences or settings.
 
 #### Example:
 ```
@@ -271,3 +272,117 @@ sessionStorage.removeItem('sessionKey');
 // Clearing all data
 sessionStorage.clear();
 ```
+
+#### Cookies
+##### Characteristics:
+  - Lifetime: Can be set to expire at a specific time, or session cookies that expire when the browser is closed.
+  - Scope: Data is sent with every HTTP request to the server. Cookies are domain-specific and can be set to be accessible from subdomains.
+  - Capacity: Limited to about 4 KB per cookie, with a maximum of around 20-50 cookies per domain.
+  - Data Type: Stores data as strings. Cookies often need to be URL-encoded/decoded.
+
+**Use Case:** Suitable for storing data that needs to be sent to the server with every request, such as session tokens, user authentication, or tracking information.
+
+##### Example:
+```
+// Setting a cookie
+document.cookie = "username=JohnDoe; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT";
+
+// Retrieving a cookie
+const cookies = document.cookie.split(';');
+let username = '';
+for (let cookie of cookies) {
+  const [name, value] = cookie.trim().split('=');
+  if (name === 'username') {
+    username = value;
+  }
+}
+
+// Deleting a cookie
+document.cookie = "username=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+```
+
+#### Summary
+  - **LocalStorage:** Persistent, large capacity, origin-wide, used for long-term storage.
+  - **SessionStorage:** Session-based, large capacity, origin-wide but tab/window-specific, used for temporary data.
+  - **Cookies:** Sent with every request, small capacity, can be domain-specific and have expiration dates, used for server communication and short-term storage.
+
+## In CSS what is the difference between display inline, display inline block and display block?
+
+In CSS, the display property determines how an element is displayed on the web page. 
+
+Here are the differences between display: `inline`, display: `inline-block`, and display: `block`:
+
+### `display: inline`
+#### Characteristics:
+  - **No line break:** Elements are displayed in a line, one after another, without starting a new line.
+  - **No width and height:** The width and height properties are ignored.
+  - **Padding and margin:** Top and bottom padding and margin are respected but do not push other elements away.
+  - **Content area:** The element's box is only as wide as its content.
+
+**Use Case:** Used for elements that should be part of the text flow, such as `<span>`, `<a>`, and `<em>`.
+
+#### Example:
+```
+.inline-element {
+  display: inline;
+  width: 100px; /* Ignored */
+  height: 50px; /* Ignored */
+  margin: 10px; /* Top and bottom margin ignored */
+  padding: 10px; /* Top and bottom padding ignored */
+}
+```
+
+### `display: block`
+#### Characteristics:
+  - Line break: Elements take up the full width available and start on a new line.
+  - Width and height: The width and height properties are respected.
+  - Margin and padding: All sides of margin and padding are respected.
+  - Content area: The element's box expands to fill the parent container's width by default.
+    
+**Use Case:** Used for elements that should occupy the full available width, such as `<div>`, `<p>`, and `<h1>`.
+
+#### Example:
+```
+.block-element {
+  display: block;
+  width: 100px; /* Respected */
+  height: 50px; /* Respected */
+  margin: 10px; /* Respected */
+  padding: 10px; /* Respected */
+}
+```
+
+### `display: inline-block`
+#### Characteristics:
+  - No line break: Elements are displayed in a line, one after another, but they behave like block elements.
+  - Width and height: The width and height properties are respected.
+  - Margin and padding: All sides of margin and padding are respected.
+  - Content area: The element's box does not expand to fill the parent container's width by default; it only takes up as much space as its content plus padding and margin.
+
+**Use Case:** Used for elements that should be part of the text flow but need to have width and height, such as <img> and custom styled buttons.
+#### Example:
+```
+.inline-block-element {
+  display: inline-block;
+  width: 100px; /* Respected */
+  height: 50px; /* Respected */
+  margin: 10px; /* Respected */
+  padding: 10px; /* Respected */
+}
+```
+### Visual Summary
+1. display: inline:
+  - Stays in line with other elements.
+  - Width and height are ignored.
+  - Top and bottom padding/margin do not affect layout.
+
+2. display: block:
+  - Starts on a new line.
+  - Takes up the full width of its container.
+  - Width, height, padding, and margin are all respected.
+
+3. display: inline-block:
+  - Stays in line with other elements.
+  - Width, height, padding, and margin are all respected.
+  - Does not take up the full width of its container by default.
+    
