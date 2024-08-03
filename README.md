@@ -31,6 +31,7 @@ Here are some of the key features introduced in ES6:
     }
    ```
 5. Destructuring Assignment
+   
     A syntax for extracting values from arrays or properties from objects into distinct variables.
    ```
     const [a, b] = [1, 2];
@@ -48,6 +49,7 @@ Here are some of the key features introduced in ES6:
     const newArr = [...arr, 4, 5];
     ```
 7. Classes
+   
     A new syntax for creating objects and dealing with inheritance, providing a cleaner and more intuitive way to create and manage objects.
    ```
     class Person {
@@ -62,6 +64,7 @@ Here are some of the key features introduced in ES6:
     }
    ```
 8. Modules
+    
     Provides a standardized way to organize and import/export code in JavaScript.
    ```
    // Exporting a function
@@ -73,6 +76,7 @@ Here are some of the key features introduced in ES6:
     import { sayHello } from './module';
    ```
 9. Promises
+    
     A new way to handle asynchronous operations, providing a cleaner alternative to callbacks.
    ```
    const fetchData = new Promise((resolve, reject) => {
@@ -83,6 +87,7 @@ Here are some of the key features introduced in ES6:
     fetchData.then(data => console.log(data));
    ```
 10. Symbol
+    
     A new primitive data type, used to create unique identifiers for object properties.
     ```
     const sym = Symbol('unique');
@@ -106,6 +111,7 @@ Here are some of the key features introduced in ES6:
         console.log(gen.next().value); // 3
       ```
 12. Map and Set
+    
     New collection types that allow for more flexible and efficient data storage.
     ```
     const map = new Map();
@@ -113,6 +119,7 @@ Here are some of the key features introduced in ES6:
     const set = new Set([1, 2, 3, 4, 4]); // No duplicate values
     ```
 13. Enhanced Object Literals
+    
     Simpler syntax for defining object properties and methods.
     ```
     const name = 'John';
@@ -127,6 +134,7 @@ Here are some of the key features introduced in ES6:
     };
     ```
 14. For-of Loop
+    
     A new loop that iterates over iterable objects such as arrays, strings, etc.
     ```
     const array = [1, 2, 3];
