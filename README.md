@@ -9,6 +9,10 @@ Here are some of the key features introduced in ES6:
 1. Block-Scoped Variables: `let` and `const`
     - let: Allows you to declare variables that are limited to the scope of a block statement.
     - const: Allows you to declare constants that cannot be reassigned.
+      ```
+      let x = 10;
+      const y = 20;
+      ```
 2. Arrow Functions
    
    Shorter syntax for writing function expressions, and they do not have their own this context.
