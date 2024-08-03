@@ -1,7 +1,7 @@
 ## remotejob-bootcamp-assignment-1
 
 # Question & Answers
-## What is ES6 and what are the new features introduced in ES6?
+## Q1: What is ES6 and what are the new features introduced in ES6?
 ES6, also known as ECMAScript 2015 or ECMAScript 6, is the sixth edition of the ECMAScript language specification. It is a significant update to JavaScript that introduced many new features and improvements, making the language more powerful and easier to use. 
 
 Here are some of the key features introduced in ES6:
@@ -146,7 +146,7 @@ Here are some of the key features introduced in ES6:
       console.log(value);
     }
     ```
-## What is Event Bubble and Event Delegation in JS?
+## Q2: What is Event Bubble and Event Delegation in JS?
 ### Event Bubbling
 
 Event Bubbling is a concept in the DOM (Document Object Model) where an event starts from the target element and then bubbles up to its ancestors in the DOM tree. When an event is triggered on an element, it first runs the handlers on that element, then on its parent, then on its parent's parent, and so on, up to the root of the document.
@@ -218,7 +218,7 @@ In this example, the event listener is added to the parent div with the ID paren
 3. ** Consistency ** : Ensures that all child elements, even those added after the event listener is attached, are handled consistently.
 
 
-## What is the difference between localstorage, session storage and cookies.
+## Q3: What is the difference between localstorage, session storage and cookies.
 
 LocalStorage, SessionStorage, and Cookies are all mechanisms for storing data on the client side in web applications. 
 
@@ -306,7 +306,9 @@ document.cookie = "username=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
   - **SessionStorage:** Session-based, large capacity, origin-wide but tab/window-specific, used for temporary data.
   - **Cookies:** Sent with every request, small capacity, can be domain-specific and have expiration dates, used for server communication and short-term storage.
 
-## In CSS what is the difference between display inline, display inline block and display block?
+
+
+## Q4: In CSS what is the difference between display inline, display inline block and display block?
 
 In CSS, the display property determines how an element is displayed on the web page. 
 
@@ -386,3 +388,50 @@ Here are the differences between display: `inline`, display: `inline-block`, and
   - Width, height, padding, and margin are all respected.
   - Does not take up the full width of its container by default.
     
+
+## Q5: What are new features in CSS3?
+
+CSS3 introduced a wide range of new features and enhancements that allow for more powerful and flexible styling of web pages. 
+
+Here are some of the notable features introduced in CSS3:
+
+### 1. Selectors
+   
+CSS3 introduced new selectors that provide more flexibility in targeting elements:
+  - Attribute selectors: [attr^=value], [attr$=value], [attr*=value]
+  - Pseudo-classes: :nth-child(), :nth-of-type(), :last-child, :first-of-type, :only-child, etc.
+  - Pseudo-elements: ::before, ::after
+    
+#### Example
+```
+/* Selects elements where the class attribute starts with 'btn' */
+[class^="btn"] {
+  background-color: blue;
+}
+
+/* Selects every odd child element */
+:nth-child(odd) {
+  background-color: lightgray;
+}
+```
+### 2. Box Model
+CSS3 introduced new box model features:
+  - Box-sizing: content-box, border-box
+#### Example:
+```
+/* The width and height include padding and border */
+.box {
+  box-sizing: border-box;
+}
+```
+### 3. Flexbox
+A layout model that provides a way to align and distribute space among items in a container.
+
+#### Example:
+```
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
