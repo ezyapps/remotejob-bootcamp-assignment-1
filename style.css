@@ -28,6 +28,7 @@ body {
   padding-right: 0rem /* 80px */;
   margin: 5rem;
   background-color: #111111;
+  border-radius: 15px;
 }
 
 .generate-pin-btn {
