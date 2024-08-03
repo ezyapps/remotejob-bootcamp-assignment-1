@@ -24,7 +24,7 @@
             <div data-value="1">1</div>
             <div data-value="2">2</div>
             <div data-value="3">3</div>
-            <div data-value="delete" id="erase">&lt; </div>
+            <div data-value="delete" id="erase">&lt;</div>
             <div data-value="4">4</div>
             <div data-value="5">5</div>
             <div data-value="6">6</div>
@@ -42,7 +42,25 @@
             <div data-value="0">0</div>
           </div>
         </div>
-        <div id="messageLabel">Message box here</div>
+        <div
+          id="messageLabelSuccess"
+          class="flex items-center space-x-1 message-success p-4"
+        >
+          <div>
+            <img src="./img/success.png" width="28px" alt="Success" />
+          </div>
+          <div>Pin Matched</div>
+        </div>
+        <div
+          id="messageLabelError"
+          class="flex items-center space-x-1 message-error p-4"
+        >
+          <div>
+            <img src="./img/error.png" width="28px" alt="Error" />
+          </div>
+
+          <div>Pin Mismatch</div>
+        </div>
       </div>
     </div>
   </body>

@@ -17,7 +17,9 @@ body {
 .items-center {
   align-items: center;
 }
-
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 0.25rem; /* 4px */
+  }
 .container {
   display: flex;
   flex-direction: column;
@@ -51,14 +53,15 @@ body {
 }
 .message-success {
   color: greenyellow;
+  font-size: 24px;
 }
 
 .message-error {
-  color: red;
+  color: red !important;
+  font-size: 24px;
 }
 
 .right-box {
-
   padding: 10px;
   padding-left: 4rem;
   padding-right: 4rem;
@@ -158,7 +161,7 @@ body {
     width: 100%;
     height: 100%;
     margin: auto;
-    background: #312c2c;
+    /* background: #312c2c; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,7 +252,7 @@ body {
     width: 50%;
     height: 100%;
     margin: auto;
-    background: #312c2c;
+    /* background: #312c2c; */
     display: flex;
     justify-content: center;
     align-items: center;
