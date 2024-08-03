@@ -12,31 +12,34 @@
         <button type="button" id="generateKeyBtn" class="generate-pin-btn">
           Generate <br />Secret Key
         </button>
-        <label class="generated-pin-label"> 123456 </label>
+        <label class="generated-pin-label" id="keyPlaceholder"> ****** </label>
       </div>
       <div class="half-width half-width-r">
         <div class="right-box">
           <div class="enter-pin-area">
             <span class="pin-input-label">Enter PIN:</span>
-            <span class="pin-input">******</span>
+            <span class="pin-input" id="pinLabel">******</span>
           </div>
           <div class="num-pad">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div id="erase"><=</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div id="clear">Clear</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div id="submit">
+            <div data-value="1">1</div>
+            <div data-value="2">2</div>
+            <div data-value="3">3</div>
+            <div data-value="delete" id="erase">&lt; </div>
+            <div data-value="4">4</div>
+            <div data-value="5">5</div>
+            <div data-value="6">6</div>
+            <div data-value="clear" id="clear">
+              <span>Clear</span>
+              <img src="./img/delete.png" width="16px" alt="Delete" />
+            </div>
+            <div data-value="7">7</div>
+            <div data-value="8">8</div>
+            <div data-value="9">9</div>
+            <div data-value="submit" id="submit">
               <span>Submit</span>
               <img src="./img/submit.png" width="16px" alt="Submit" />
             </div>
-            <div>0</div>
+            <div data-value="0">0</div>
           </div>
         </div>
         <div id="messageLabel">Message box here</div>
