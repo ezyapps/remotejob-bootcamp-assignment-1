@@ -146,3 +146,10 @@ Here are some of the key features introduced in ES6:
       console.log(value);
     }
     ```
+## What is Event Bubble and Event Delegation in JS?
+    ### Event Bubbling
+    
+    Event Bubbling is a concept in the DOM (Document Object Model) where an event starts from the target element and then bubbles up to its ancestors in the DOM tree. When an event is triggered on an element, it first runs the handlers on that element, then on its parent, then on its parent's parent, and so on, up to the root of the document.
+
+    
+    
