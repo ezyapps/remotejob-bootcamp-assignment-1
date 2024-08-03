@@ -147,9 +147,75 @@ Here are some of the key features introduced in ES6:
     }
     ```
 ## What is Event Bubble and Event Delegation in JS?
-    ### Event Bubbling
-    
-    Event Bubbling is a concept in the DOM (Document Object Model) where an event starts from the target element and then bubbles up to its ancestors in the DOM tree. When an event is triggered on an element, it first runs the handlers on that element, then on its parent, then on its parent's parent, and so on, up to the root of the document.
+### Event Bubbling
 
+Event Bubbling is a concept in the DOM (Document Object Model) where an event starts from the target element and then bubbles up to its ancestors in the DOM tree. When an event is triggered on an element, it first runs the handlers on that element, then on its parent, then on its parent's parent, and so on, up to the root of the document.
+
+#### Example of Event Bubbling
+    ```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Event Bubbling Example</title>
+    </head>
+    <body>
+      <div id="parent">
+        <button id="child">Click Me!</button>
+      </div>
     
+      <script>
+        document.getElementById('parent').addEventListener('click', function() {
+          alert('Parent clicked');
+        });
     
+        document.getElementById('child').addEventListener('click', function() {
+          alert('Child clicked');
+        });
+      </script>
+    </body>
+    </html>
+    ```
+
+In this example, when I click the button, both alerts will show up. First, the Child clicked alert (because the button is the target element), and then the Parent clicked alert (because the event bubbles up to the parent).
+    
+### Event Delegation
+
+Event Delegation is a technique that leverages event bubbling to handle events at a higher level in the DOM rather than adding event listeners to individual child elements. By using event delegation, you attach a single event listener to a parent element that listens for events on its children. This is especially useful when you have a large number of child elements or when elements are dynamically added or removed.
+
+#### Example of Event Delegation
+    ```
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Event Delegation Example</title>
+    </head>
+    <body>
+      <div id="parent">
+        <button class="child">Button 1</button>
+        <button class="child">Button 2</button>
+        <button class="child">Button 3</button>
+      </div>
+    
+      <script>
+        document.getElementById('parent').addEventListener('click', function(event) {
+          if (event.target && event.target.matches('.child')) {
+            alert('Child button clicked: ' + event.target.textContent);
+          }
+        });
+      </script>
+    </body>
+    </html>
+    ```
+In this example, the event listener is added to the parent div with the ID parent. When any of the child buttons are clicked, the event listener on the parent div handles the event. The event.target property is used to identify the actual element that triggered the event, and event.target.matches('.child') checks if the clicked element has the class child.
+
+#### Advantages of Event Delegation
+    1. **Improved Performance**: Reduces the number of event listeners attached to the DOM, which can be beneficial for performance, especially with a large number of child elements.
+    2. **Simplified Code**: Makes it easier to manage event listeners, especially when adding or removing child elements dynamically.
+    3. **Consistency**: Ensures that all child elements, even those added after the event listener is attached, are handled consistently.
+
+
+## What is the difference between localstorage, session storage and cookies.
