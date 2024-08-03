@@ -15,3 +15,10 @@ Here are some of the key features introduced in ES6:
    ```
    const add = (a, b) => a + b;
    ```
+3. Template Literals
+   
+Allows embedded expressions and multi-line strings using backticks (````).
+```
+const name = 'John';
+const greeting = `Hello, ${name}!`;
+```
