@@ -435,3 +435,159 @@ A layout model that provides a way to align and distribute space among items in 
   align-items: center;
 }
 ```
+### 4. Grid Layout
+A two-dimensional layout system for the web that allows you to create complex layouts.
+
+#### Example:
+```
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+```
+### 5. Transitions
+Allows you to change property values smoothly (over a given duration).
+
+#### Example:
+```
+.button {
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: blue;
+}
+```
+
+### 6. Animations
+Allows you to animate the values of CSS properties over time.
+
+#### Example:
+```
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.element {
+  animation: slide 2s infinite;
+}
+```
+
+### 7. Transforms
+Allows you to rotate, scale, skew, or translate an element.
+
+#### Example:
+```
+.element {
+  transform: rotate(45deg) scale(1.5);
+}
+```
+
+### 8. Multiple Backgrounds
+Allows you to apply multiple background images to a single element.
+
+#### Example:
+```
+.element {
+  background: url(image1.png), url(image2.png);
+  background-position: left top, right bottom;
+}
+```
+
+### 9. Rounded Corners
+Allows you to round the corners of elements using the border-radius property.
+
+#### Example:
+```
+.box {
+  border-radius: 10px;
+}
+```
+
+### 10. Gradients
+CSS3 allows you to create linear and radial gradients.
+
+#### Example:
+```
+/* Linear gradient */
+.box {
+  background: linear-gradient(to right, red, yellow);
+}
+
+/* Radial gradient */
+.circle {
+  background: radial-gradient(circle, red, yellow);
+}
+```
+
+### 11. Text Effects
+CSS3 introduced text effects like text shadow, word wrap, and more.
+
+#### Example:
+```
+/* Text shadow */
+.text {
+  text-shadow: 2px 2px 5px gray;
+}
+
+/* Word wrap */
+.text {
+  word-wrap: break-word;
+}
+```
+
+### 12. Media Queries
+Allows you to apply different styles for different devices or screen sizes.
+
+#### Example:
+```
+/* Apply styles for screens with a width of at least 600px */
+@media (min-width: 600px) {
+  .container {
+    background-color: lightblue;
+  }
+}
+```
+
+### 13. Custom Fonts
+Allows you to use custom fonts in your web pages using the @font-face rule.
+
+#### Example:
+```
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('mycustomfont.woff2') format('woff2');
+}
+
+body {
+  font-family: 'MyCustomFont', sans-serif;
+}
+```
+
+### 14. Opacity
+Allows you to set the transparency of an element.
+
+#### Example:
+```
+.element {
+  opacity: 0.5;
+}
+```
+
+### 15. Calc() Function
+Allows you to perform calculations to determine CSS property values.
+
+#### Example:
+```
+.element {
+  width: calc(100% - 50px);
+}
+```
+
+These features provide web developers with a wide range of tools for creating more dynamic, responsive, and visually appealing web pages. CSS3 has significantly enhanced the capabilities of CSS, allowing for greater control over the presentation of web content.
